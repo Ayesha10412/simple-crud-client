@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
   
-const handleAddUser = event=>{
+const handleAddUser = event =>{
   event.preventDefault();
   const form = event.target;
   const name= form.name.value;
@@ -17,7 +17,7 @@ fetch('http://localhost:5000/users', {
   headers:{
     'content-type': 'application/json'
   },
-  body: JSON.stringify(user)
+  body: JSON.stringify(user),
 })
 .then(res=>res.json())
 .then(data=>console.log(data))
